@@ -1,0 +1,105 @@
+.page__container {
+    background: url(../assets/blurredpurpleimages.jfif) no-repeat;
+    background-size: cover;
+    font-family: Trebuchet MS;
+    padding: 3% 5%;
+    font-size: 22px;
+    /* height: 100vh; */
+}
+.page__heading {
+    text-align: center;
+    color: white;
+}
+
+.header__image{
+    height:70px;
+    display: inline;
+}
+
+.question__section {
+    background: white;
+    border-radius: 15px;
+    padding: 3%;
+    box-shadow: 5px 5px 9px #404040;
+}
+.question--position {
+    width: 60%;
+    display: inline-block;
+}
+.question__container {
+    position: relative;
+}
+button:focus {
+    outline: none;
+    border: 2px solid #993399;
+}
+button {
+    background-color: #862d85;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.1s;
+}
+button:hover {
+    background-color: #441643;
+}
+.radio-button__container {
+    display: inline-block;
+}
+
+.radio-button__style {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    margin: 12px 25px 0px 0px;
+}
+
+.radio-button__style .radio-button__style--label {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 21px;
+    height: 21px;
+    border: 2px solid #862d85;
+    border-radius: 100%;
+}
+
+.radio-button__style .radio-button__style--label:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    background: #862d85;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.radio-button__style:hover .radio-button__style--label:after {
+    transform: scale(0);
+}
+
+input[type="radio"]:checked + .radio-button__style--label {
+    border-color: #862d85;
+}
+
+input[type="radio"]:checked + .radio-button__style--label:after {
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+    opacity: 1;
+}
+
+.radio-button__style--hidden {
+    display: none;
+}
