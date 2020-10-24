@@ -10,10 +10,21 @@
         <div class="question__section">
             <div *ngFor="let question of mockQuestions" class="question__container">
                 <p>{{question.ques}}</p>
-                <div *ngFor="let option of question.options" class="radio-button__container">
+                <div class="radio-button__container">
                     <label class="radio-button__style">
-                        <input type=radio name="question" value="one" class="radio-button__style--hidden">
-                        <span class="radio-button__style--label"></span>{{option}}
+                        <input type="radio" id={{question.one}} name={{question.ques}} value={{question.one}}
+                        (change)="onSelectionChange(question.one)" class="radio-button__style--hidden" >
+                        <span class="radio-button__style--label"></span>{{question.one}}
+                    </label>
+                    <label class="radio-button__style">
+                        <input type="radio" id={{question.two}} name={{question.ques}} value={{question.two}}
+                        (change)="onSelectionChange(question.two)" class="radio-button__style--hidden">
+                        <span class="radio-button__style--label"></span>{{question.two}}
+                    </label>
+                    <label class="radio-button__style">
+                        <input type="radio" id={{question.three}} name={{question.ques}} value={{question.three}}
+                        (change)="onSelectionChange(question.three)" class="radio-button__style--hidden">
+                        <span class="radio-button__style--label"></span>{{question.three}}
                     </label>
                 </div>
             </div>
