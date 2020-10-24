@@ -35,7 +35,7 @@ export class AppComponent {
     ];
 
     submit() {
-        console.log('submitted');
+        console.log(this.valArray);
     }
 
     onSelectionChange() {

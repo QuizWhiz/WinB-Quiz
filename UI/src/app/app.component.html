@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
+<div class="page__header d-flex">
+    <div><img class="header__image" src="../assets/winbLogo.png"></div>
+    <div class="page__heading">
+        <p>Quiz Whiz</p>
+    </div>
+</div>
 
-<body onload="buttonClicked()">
+<body>
     <div class="page__container">
-        <div>
-            <!-- <img class="header__image" src="../assets/winbLogo.png"> -->
-        <h1 class="page__heading">WinB Quiz</h1>
-        </div>
         <form>
             <div class="question__section">
                 <div *ngFor="let question of mockQuestions" class="question__container">
                     <p>{{question.ques}}</p>
                     <div class="radio-button__container">
-                        <label class="radio-button__style">
+                        <label class="col-3 radio-button__style">
                             <input type="radio" id={{question.one}} name={{question.ques}} value={{question.one}}
                             (change)="onSelectionChange()" class="radio-button__style--hidden" [(ngModel)]="valArray[question.option]">
                             <span class="radio-button__style--label"></span>{{question.one}}
                         </label>
-                        <label class="radio-button__style">
+                        <label class="col-3 radio-button__style">
                             <input type="radio" id={{question.two}} name={{question.ques}} value={{question.two}}
                             (change)="onSelectionChange()" class="radio-button__style--hidden" [(ngModel)]="valArray[question.option]">
                             <span class="radio-button__style--label"></span>{{question.two}}
                         </label>
-                        <label class="radio-button__style">
+                        <label class="col-3 radio-button__style">
                             <input type="radio" id={{question.three}} name={{question.ques}} value={{question.three}}
                             (change)="onSelectionChange()" class="radio-button__style--hidden" [(ngModel)]="valArray[question.option]">
                             <span class="radio-button__style--label"></span>{{question.three}}
@@ -33,11 +35,10 @@
                     <p class="question--position" id="question5"></p>
                     <div class="answer__box--position"><input type="text" id="answer5"></div>
                 </div> -->
-                <button>Submit</button>
+                <button (click)="submit()">Submit</button>
             </div>
         </form>
         
     </div>
 </body>
-
 </html>

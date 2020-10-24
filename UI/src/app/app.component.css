@@ -1,21 +1,38 @@
+p{
+    margin-bottom: 0px !important;
+}
+.page__header{
+    background:white;
+    position: fixed;  
+    width: 100%;
+    z-index: 1;
+    box-shadow: 5px 5px 9px #404040;
+    font-family: Trebuchet MS !important;
+}
+.page__heading {
+    margin: 2% 30%;
+    text-align: center;
+    color: #993399;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.page__header.page__container{
+    background-color: white !important;
+}
 .page__container {
     background: url(../assets/blurredpurpleimages.jfif) no-repeat;
     background-size: cover;
     font-family: Trebuchet MS;
-    padding: 3% 5%;
+    padding: 180px 5% 3% 5%;
     font-size: 22px;
     /* height: 100vh; */
 }
-.page__heading {
-    text-align: center;
-    color: white;
-}
 
 .header__image{
-    height:70px;
+    padding: 20%;
+    height:120px;
     display: inline;
 }
-
 .question__section {
     background: white;
     border-radius: 15px;
@@ -28,10 +45,11 @@
 }
 .question__container {
     position: relative;
+    margin-bottom: 2%;
 }
 button:focus {
     outline: none;
-    border: 2px solid #993399;
+    background-color: #993399;
 }
 button {
     background-color: #862d85;
@@ -52,6 +70,7 @@ button:hover {
 }
 .radio-button__container {
     display: inline-block;
+    width:100%
 }
 
 .radio-button__style {
@@ -65,7 +84,7 @@ button:hover {
     position: relative;
     display: block;
     float: left;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-right: 10px;
     width: 21px;
     height: 21px;
