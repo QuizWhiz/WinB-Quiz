@@ -70,6 +70,7 @@ button:hover {
 }
 .radio-button__container {
     display: inline-block;
+    width:100%
 }
 
 .radio-button__style {
