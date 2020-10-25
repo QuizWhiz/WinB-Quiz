@@ -9,6 +9,7 @@ export class AppComponent {
     title = 'WinBQuiz';
 
     public valArray: string[] = [];
+    public isSubmitted = false;
 
     mockQuestions = [
         {
@@ -35,6 +36,7 @@ export class AppComponent {
     ];
 
     submit() {
+        this.isSubmitted = true;
         console.log(this.valArray);
     }
 

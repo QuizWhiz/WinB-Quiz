@@ -122,3 +122,10 @@ input[type="radio"]:checked + .radio-button__style--label:after {
 .radio-button__style--hidden {
     display: none;
 }
+
+.bg {
+    width: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
