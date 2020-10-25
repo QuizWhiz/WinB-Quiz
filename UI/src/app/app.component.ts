@@ -9,26 +9,24 @@ import { DataService } from './service/data.service';
 export class AppComponent implements OnInit{
     title = 'WinBQuiz';
 
+    public valArray: string[] = [];
+    public isSubmitted = false;
+
     mockQuestions = [
         {
-            "ques": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
-            "options": ["one", "two", "three", "four"]
+            option: 'option1',
+            ques: "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
+            options: ['one', 'two', 'three']
         },
         {
-            "ques": "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
-            "options": ["one", "two", "three", "four"]
+            option: 'option2',
+            ques: "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
+            options: ['one', 'two', 'three']
         },
         {
-            "ques": "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
-            "options": ["one", "two", "three", "four"]
-        },
-        {
-            "ques": "4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
-            "options": ["one", "two", "three", "four"]
-        },
-        {
-            "ques": "5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
-            "options": ["one", "two", "three", "four"]
+            option: 'option3',
+            ques: "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
+            options: ['one', 'two', 'three']
         }
     ]
     constructor(private dataService: DataService) {}
@@ -40,7 +38,12 @@ export class AppComponent implements OnInit{
     }
 
     submit() {
-        console.log('submitted');
+        this.isSubmitted = true;
+        console.log(this.valArray);
+    }
+
+    onSelectionChange() {
+        this.valArray.push();
     }
 
 }
