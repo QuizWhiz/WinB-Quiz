@@ -69,7 +69,7 @@ button:hover {
     background-color: #441643;
 }
 .radio-button__container {
-    display: inline-block;
+    display: inline;
     width:100%
 }
 
@@ -123,9 +123,13 @@ input[type="radio"]:checked + .radio-button__style--label:after {
     display: none;
 }
 
-.bg {
+.after-submit-bg {
     width: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}       
+.after-submit-bg__container {
+    height: 100vh;
+    overflow: hidden;
+}
