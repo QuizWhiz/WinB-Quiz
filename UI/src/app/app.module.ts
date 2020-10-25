@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { DataService } from './service/data.service';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -9,9 +11,11 @@ import { FormsModule } from '@angular/forms';
     AppComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
