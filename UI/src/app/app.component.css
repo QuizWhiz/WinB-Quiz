@@ -133,3 +133,26 @@ input[type="radio"]:checked + .radio-button__style--label:after {
     height: 100vh;
     overflow: hidden;
 }
+.questionImage {
+    width: 300px
+}
+
+.img__container {
+    padding: 5px 60px;
+}
+
+input[type="text"] {    
+    width: 20%;
+    padding: 11px 20px;
+    margin: 120px 25px;
+    border: 2px solid #d279d2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #a6a6a6;
+    float: right;
+    transition: border ease-in-out 0.3s;
+}
+input:focus {
+    outline: none;
+    border: 2px solid #993399;
+}
