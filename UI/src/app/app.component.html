@@ -12,7 +12,11 @@
             <form>
                 <div *ngFor="let question of mockQuestions" class="question__container">
                     <p>{{question.ques}}</p>
-                    <div class="radio-button__container">
+                    <div *ngIf="question.image != null" class="row img__container">
+                        <img class="questionImage" src={{question.image}}>
+                        <input type="text" id="fname" name="fname" (change)=onInputChange($event,question.option)>
+                    </div>
+                    <div *ngIf="question.image == null" class="radio-button__container">
                         <label *ngFor="let option of question.options; let i = index" class="col-3 radio-button__style">
                             <input type="radio" id={{i}}_{{option}} name={{question.option}} value={{option}}
                                 class="radio-button__style--hidden" (change)=onSelected($event,question.option)>
