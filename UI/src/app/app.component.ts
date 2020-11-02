@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {​
             option: 1,
             ques: "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
             options: ['one', 'two', 'three'],
-            image: '../assets/winbLogo.png'
+            image: null
         }​,
         {​
             option: 2,
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {​
             option: 3,
             ques: "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
             options: ['one', 'two', 'three'],
-            image: '../assets/winbLogo.png'
+            image: null
         }​,
         {​
             option: 4,
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {​
             option: 5,
             ques: "5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia ornare ex, maximus porta enim scelerisque in. Cras sit amet turpis ut est molestie maximus.?",
             options: ['one', 'two', 'three'],
-            image: '../assets/winbLogo.png'
+            image: null
         }​
     ];
     constructor(private dataService: DataService) {​}​
